@@ -72,6 +72,9 @@
 	.radio-label{
 		margin-left: 30px;
 	}
+	.first-label{
+		margin-left: 0px;
+	}
 </style>
 <div class="container">
 <form id="msform" action="user" method="post">
@@ -171,8 +174,8 @@
 				<div class="col-sm-6">
 				    <h3 class="fs-subtitle radio-sub">Form of Payment</h3>
 			    </div>
-			    <div class="col-ms-6 radio-6">
-			      <label class="radio-label">
+			    <div class="col-sm-6">
+			      <label class="radio-label first-label">
 			        <input type="radio" class="form-check-input radio" name="user[payment_type]" id="credit" value="Credit Card" checked>
 			        <span class="radio-br">Credit Card</span>
 			      </label>
@@ -195,8 +198,8 @@
 				<div class="col-sm-6">
 				    <h3 class="fs-subtitle radio-sub">How Will You be Paying?</h3>
 			    </div>
-			    <div class="col-ms-6 radio-6">
-			      <label class="radio-label">
+			    <div class="col-sm-6">
+			      <label class="radio-label first-label">
 			        <input type="radio" class="form-check-input radio" name="user[payment_method]" id="call_you" value="I Will Call" checked>
 			        <span class="radio-br">I will call</span>
 			      </label>
