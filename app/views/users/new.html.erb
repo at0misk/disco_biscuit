@@ -1,6 +1,6 @@
 <style type="text/css">
 	.radio-6{
-		width: 49%;
+		/*width: 49%;*/
 		display: inline-block;
 		text-align: center;
 	}
@@ -26,8 +26,16 @@
 	.radio-sub{
 		margin-top: 0px;
 	}
-	.sub-copy{
-	    padding: 0px 160px;
+	@media(min-width: 991px){
+		.sub-copy{
+		    padding: 0px 160px;
+		}
+	}
+	@media(max-width: 756px){
+		fieldset{
+			margin: 0px !important;
+			width: 100% !important;
+		}
 	}
 	table{
 		text-align: left;
