@@ -53,6 +53,25 @@
 		color: #2c3e50;
 		font-weight: 700;
 	}
+	.radio-br{
+		display: block;
+	}
+	.radio-inline .form-check-input{
+	    width: 100% !important;
+	    margin-left: 0 !important;
+	    position: relative !important;
+	}
+	.radio{
+	    display: inline !important;
+	    position: relative !important;
+	    /* text-align: center; */
+	    margin: 0px auto !important;
+	    /* margin-left: 12px; */
+	    width: auto !important;
+	}
+	.radio-label{
+		margin-left: 20px;
+	}
 </style>
 <div class="container">
 <form id="msform" action="user" method="post">
@@ -153,21 +172,21 @@
 				    <h3 class="fs-subtitle radio-sub">Form of Payment</h3>
 			    </div>
 			    <div class="col-ms-6 radio-6">
-			      <label class="radio-inline">
-			        <input type="radio" class="form-check-input" name="user[payment_type]" id="credit" value="Credit Card" checked>
-			        Credit Card
+			      <label class="radio-label">
+			        <input type="radio" class="form-check-input radio" name="user[payment_type]" id="credit" value="Credit Card" checked>
+			        <span class="radio-br">Credit Card</span>
 			      </label>
-			      <label class="radio-inline">
-			        <input type="radio" class="form-check-input" name="user[payment_type]" id="cash" value="Cash">
-			        Cash
+			      <label class="radio-label">
+			        <input type="radio" class="form-check-input radio" name="user[payment_type]" id="cash" value="Cash">
+			        <span class="radio-br">Cash</span>
 			      </label>
-			    <label class="radio-inline">
-			        <input type="radio" class="form-check-input" name="user[payment_type]" id="check" value="Check">
-			        Check
+			    <label class="radio-label">
+			        <input type="radio" class="form-check-input radio" name="user[payment_type]" id="check" value="Check">
+			        <span class="radio-br">Check</span>
 			      </label>
-			    <label class="radio-inline">
-			        <input type="radio" class="form-check-input" name="user[payment_type]" id="MO" value="MO">
-			        MO
+			    <label class="radio-label">
+			        <input type="radio" class="form-check-input radio" name="user[payment_type]" id="MO" value="MO">
+			        <span class="radio-br">MO</span>
 			      </label>
 			    </div>
 		    </div>
@@ -177,17 +196,17 @@
 				    <h3 class="fs-subtitle radio-sub">How Will You be Paying?</h3>
 			    </div>
 			    <div class="col-ms-6 radio-6">
-			      <label class="radio-inline">
-			        <input type="radio" class="form-check-input" name="user[payment_method]" id="mail" value="Mail" checked>
-			        Mail
+			      <label class="radio-label">
+			        <input type="radio" class="form-check-input radio" name="user[payment_method]" id="mail" value="Mail" checked>
+			        <span class="radio-br">Mail</span>
 			      </label>
-			      <label class="radio-inline">
-			        <input type="radio" class="form-check-input" name="user[payment_method]" id="call_you" value="I Will Call">
-			        I will call
+			      <label class="radio-label">
+			        <input type="radio" class="form-check-input radio" name="user[payment_method]" id="call_you" value="I Will Call">
+			        <span class="radio-br">I will call</span>
 			      </label>
-			    <label class="radio-inline">
-			        <input type="radio" class="form-check-input" name="user[payment_method]" id="call_me" value="Please Call Me">
-			        Please call me
+			    <label class="radio-label">
+			        <input type="radio" class="form-check-input radio" name="user[payment_method]" id="call_me" value="Please Call Me">
+			        <span class="radio-br">Please call me</span>
 			      </label>
 			     </div>
 		   </div>
