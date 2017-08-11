@@ -1,0 +1,192 @@
+<style type="text/css">
+	.radio-6{
+		width: 49%;
+		display: inline-block;
+		text-align: center;
+	}
+	.radio-row{
+		text-align: left;
+	}
+	.sub-col{
+		margin-top: 25px;
+		text-align: center;
+	}
+	.sub-col button{
+		width: 50%;
+		margin: 0px auto;
+		margin-bottom: 15px;
+	}
+	.notice-copy{
+		margin-top: 0px;
+		margin-bottom: 5px;
+	}
+	#msform{
+		margin-bottom: 25px;
+	}
+	.radio-sub{
+		margin-top: 0px;
+	}
+	.sub-copy{
+	    padding: 0px 160px;
+	}
+	table{
+		text-align: left;
+	}
+	.cat-radio{
+		display: inline;
+		width: auto !important;
+		margin-right: 15px !important;
+	}
+	label{
+		font-weight: 400;
+	}
+	.errors{
+		color: #2c3e50;
+		font-weight: 700;
+	}
+</style>
+<div class="container">
+<form id="msform" action="user" method="post">
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+            <!-- fieldsets -->
+            <fieldset>
+            	<% if flash[:errors] %>
+	            	<h3 class="fs-subtitle errors"><%= flash[:errors] %></h3>
+            	<% end %>
+                <h2 class="fs-title">DISCO BISCUIT SHOW</h2>
+                <h3 class="fs-subtitle sub-copy">You are invited to join and celebrate on board Carnival's ship The Inspiration sailing August 10, 2018 returning August 13, 2018.  Sail round trip from Long Beach to Ensenada.</h3>
+                <h3 class="fs-subtitle sub-copy">Please select the category of your choice<br/>Rates are based on Double Occupancy</h3>
+                <table class="table">
+                	<thead>
+                		<th>Cabin Type</th>
+                		<th>Cruise Rate Per Person</th>
+                		<th>Port/Gvt. Taxes Per Person</th>
+                	</thead>
+                	<tbody>
+                		<tr>
+	                		<td><input type="radio" id="cat6b" name="user[cat]" class="cat-radio" value="Category 6B Oceanview" checked><label for="cat6b">Category 6B Oceanview</label></td>
+	                		<td>$315.00</td>
+	                		<td>$169.08</td>
+                		</tr>
+                		<tr>
+	                		<td><input type="radio" id="cat4b" name="user[cat]" class="cat-radio" value="Category 4B Interior"><label for="cat4b">Category 4B Interior</label></td>
+	                		<td>$265.00</td>
+	                		<td>$169.08</td>
+                		</tr>
+                	</tbody>
+                </table>
+                <h3 class="fs-subtitle sub-copy">Above cabin inventory is limited and all space is sold on a first come first serve basis.  Additional cabins will be based on current rates at time of inquiry and are subject to increase and availability per carnival cruise line.</h3>
+                <h3 class="fs-subtitle sub-copy">Deposit is $100.00 per person.</h3>
+			<div class="row form-row">
+				<div class="form-group col-sm-6">
+				    <!-- <label for="first-quote" class="control-label">First Name</label> -->
+			        <input name="user[first]" type="text" id="first" placeholder="Legal Name" required/>
+				</div>
+			    <div class="form-group col-sm-6">
+				    <!-- <label for="last-quote" class="control-label">Last Name</label> -->
+			        <input name="user[first_birth]" type="text" id="first_birth" placeholder="Birthday" required/>
+			    </div>
+			</div>
+			<div class="row form-row">
+				<div class="form-group col-sm-6">
+				    <!-- <label for="first-quote" class="control-label">First Name</label> -->
+			        <input name="user[second]" type="text" id="second" placeholder="Legal Name"/>
+				</div>
+			    <div class="form-group col-sm-6">
+				    <!-- <label for="last-quote" class="control-label">Last Name</label> -->
+			        <input name="user[second_birth]" type="text" id="second_birth" placeholder="Birthday"/>
+			    </div>
+			</div>
+			<div class="row form-row">
+				<div class="form-group col-sm-6">
+				    <!-- <label for="first-quote" class="control-label">First Name</label> -->
+			        <input name="user[address]" type="text" id="address" placeholder="Address" required/>
+				</div>
+			    <div class="form-group col-sm-6">
+				    <!-- <label for="last-quote" class="control-label">Last Name</label> -->
+			        <input name="user[city]" type="text" id="city" placeholder="City" required/>
+			    </div>
+			</div>
+			<div class="row form-row">
+			    <div class="form-group col-sm-6">
+				    <!-- <label for="last-quote" class="control-label">Last Name</label> -->
+			        <input name="user[state]" type="text" id="state" placeholder="State" required/>
+			    </div>
+			    <div class="form-group col-sm-6">
+				    <!-- <label for="last-quote" class="control-label">Last Name</label> -->
+			        <input name="user[zip]" type="text" id="zip" placeholder="Zip" required/>
+			    </div>
+			</div>
+			<div class="row form-row">
+			    <div class="form-group col-sm-6">
+				    <!-- <label for="last-quote" class="control-label">Last Name</label> -->
+			        <input name="user[email]" type="text" id="email" placeholder="Email Address" required/>
+			    </div>
+			    <div class="form-group col-sm-6">
+				    <!-- <label for="last-quote" class="control-label">Last Name</label> -->
+			        <input name="user[phone]" type="text" id="phone" placeholder="Phone Number" required/>
+			    </div>
+			</div>
+			<div class="row form-row">
+			    <div class="form-group col-sm-6">
+				    <!-- <label for="last-quote" class="control-label">Last Name</label> -->
+			        <input name="user[deposit]" type="number" id="deposit" placeholder="Deposit Amount $" required min="1"/>
+			    </div>
+			    <div class="form-group col-sm-6">
+				    <!-- <label for="last-quote" class="control-label">Last Name</label> -->
+			        <input name="user[phone]" type="text" id="phone" placeholder="Phone Number" required/>
+			    </div>
+			</div>
+			<div class="row form-row">
+				<div class="col-sm-6">
+				    <h3 class="fs-subtitle radio-sub">Form of Payment</h3>
+			    </div>
+				<div class="col-sm-6">
+				    <h3 class="fs-subtitle radio-sub">How Will You be Paying?</h3>
+			    </div>
+		    </div>
+		    <div class="row form-row radio-row">
+			    <div class="col-ms-6 radio-6">
+			      <label class="radio-inline">
+			        <input type="radio" class="form-check-input" name="user[payment_type]" id="credit" value="Credit Card" checked>
+			        Credit Card
+			      </label>
+			      <label class="radio-inline">
+			        <input type="radio" class="form-check-input" name="user[payment_type]" id="cash" value="Cash">
+			        Cash
+			      </label>
+			    <label class="radio-inline">
+			        <input type="radio" class="form-check-input" name="user[payment_type]" id="check" value="Check">
+			        Check
+			      </label>
+			    <label class="radio-inline">
+			        <input type="radio" class="form-check-input" name="user[payment_type]" id="MO" value="MO">
+			        MO
+			      </label>
+			    </div>
+			    <div class="col-ms-6 radio-6">
+			      <label class="radio-inline">
+			        <input type="radio" class="form-check-input" name="user[payment_method]" id="mail" value="Mail" checked>
+			        Mail
+			      </label>
+			      <label class="radio-inline">
+			        <input type="radio" class="form-check-input" name="user[payment_method]" id="call_you" value="I Will Call">
+			        I will call
+			      </label>
+			    <label class="radio-inline">
+			        <input type="radio" class="form-check-input" name="user[payment_method]" id="call_me" value="Please Call Me">
+			        Please call me
+			      </label>
+			     </div>
+		   </div>
+		    <div class="row form-row">
+			    <div class="col-ms-12 sub-col">
+			    	<button class="btn btn-primary btn-lg btn-block btn-huge">Submit</button>
+			    </div>
+			</div>
+           <h3 class="fs-subtitle notice-copy">All Return Checks Subject to $25.00 Processing Fee</h3>
+           <h3 class="fs-subtitle notice-copy">Archer Travel Service 4148 Oceanview Blvd Montrose CA 91020</h3>
+           <h3 class="fs-subtitle notice-copy">For More Information Call Marie 818 236 4268 or Peggy 818 236 4201</h3>
+		</fieldset>
+	</form>
+</div>

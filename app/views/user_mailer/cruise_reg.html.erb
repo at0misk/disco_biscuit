@@ -1,0 +1,12 @@
+<h2>Hello!</h2>
+<h2><%= @user.first %> wants to go on the Disco Biscuit Cruise</h2>
+<h3>Cabin Category: <%= @user.cat %></h3>
+<h3>First Guest: <%= @user.first %> / Birthday: <%= @user.first_birth %></h3>
+<% if @user.second != '' && @user.second_birth != '' %>
+<h3>Second Guest: <%= @user.second %> / Birthday: <%= @user.second_birth %></h3>
+<% end %>
+<h3>Address: <%= @user.address %> <%= @user.city %>, <%= @user.state %> <%= @user.zip %></h3>
+<h3>Email: <%= @user.email %></h3>
+<h3>Phone Number: <%= @user.phone %></h3>
+<h3>Form of Payment: <%= @user.payment_type %></h3>
+<h3>Payment Method: <%= @user.payment_method %></h3>
