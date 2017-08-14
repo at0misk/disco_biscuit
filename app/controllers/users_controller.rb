@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		puts @user
 		if @user.save
-			emails = ["ktp925@gmail.com", "kevint@archertravel.com"]
+			emails = ["mariel@archertravel.com", "peggyh@archertravel.com", "kevint@archertravel.com"]
 			emails.each do |val|
 				UserMailer.cruise_reg(@user, val).deliver_now
 			end
