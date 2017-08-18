@@ -5,9 +5,9 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		puts @user
 		if @user.save
-			emails = ["mariel@archertravel.com", "peggyh@archertravel.com", "kevint@archertravel.com"]
+			emails = Email.all
 			emails.each do |val|
-				UserMailer.cruise_reg(@user, val).deliver_now
+				UserMailer.cruise_reg(@user, val.address).deliver_now
 			end
 			flash[:errors] = "Thank you, your form has been sent!"
 		else
