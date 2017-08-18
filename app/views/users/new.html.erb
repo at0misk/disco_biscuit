@@ -74,18 +74,21 @@
 	.first-label{
 		margin-left: 0px;
 	}
+	.flyer{
+		width: 100%;
+		height: auto;
+	}
 </style>
 <div class="container">
 <form id="msform" action="user" method="post">
         <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
             <!-- fieldsets -->
             <fieldset>
+            	<%= image_tag('disco.png', :class => "flyer") %>
             	<% if flash[:errors] %>
 	            	<h3 class="fs-subtitle errors"><%= flash[:errors] %></h3>
             	<% end %>
-                <h2 class="fs-title">DISCO BISCUIT SHOW</h2>
-                <h3 class="fs-subtitle sub-copy">You are invited to join and celebrate on board Carnival's ship The Inspiration sailing August 10, 2018 returning August 13, 2018.  Sail round trip from Long Beach to Ensenada.</h3>
-                <h3 class="fs-subtitle sub-copy">Please select the category of your choice<br/>Rates are based on Double Occupancy</h3>
+                <h3 class="fs-subtitle sub-copy">Please select the category of your choice. Rates are based on Double Occupancy</h3>
                 <table class="table">
                 	<thead>
                 		<th>Cabin Type</th>
