@@ -17,6 +17,6 @@ class UsersController < ApplicationController
 		# mailers go here
 	end
 	def user_params
-  		params.require(:user).permit(:first, :second, :first_birth, :second_birth, :email, :phone, :address, :city, :state, :zip, :deposit, :payment_type, :payment_method, :cat) 
+  		params.require(:user).permit(:first, :second, :first_birth, :second_birth, :email, :phone, :address, :city, :state, :zip, :deposit, :payment_type, :payment_method, :cat, :alt_phone) 
 	end
 end
